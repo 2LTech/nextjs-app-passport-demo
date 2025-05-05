@@ -1,0 +1,9 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1a237e 0%, #2979ff 100%) !important;
+}
