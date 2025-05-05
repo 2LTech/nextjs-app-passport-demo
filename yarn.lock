@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@2ltech/nextjs-app-passport@0.9.5":
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/@2ltech/nextjs-app-passport/-/nextjs-app-passport-0.9.5.tgz#8fc36c15c8e50d6ec0a595e9a21e01151138d1ed"
-  integrity sha512-p0qG8ubTwAJFDciPXWK8wiAnVMoBNhR/EPssQPu54xbrwT3Cbtnt2s3UIBGeOgs13/5njEFBq00VeiUAyf+/kA==
+"@2ltech/nextjs-app-passport@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@2ltech/nextjs-app-passport/-/nextjs-app-passport-1.0.0.tgz#c3bd43ba1a02133630c893acc64ff68a986d5f68"
+  integrity sha512-RBI2seGfSBQdz28C5ZPu+WSjwOmCkOeJVxOewmcOjmHxvY6s0K59wqa8H6yBKc205L4d2yDUUlNf3AWb7rPMWQ==
   dependencies:
     "@hapi/iron" "7.0.1"
     passport "0.7.0"
