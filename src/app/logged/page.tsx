@@ -1,37 +1,37 @@
-'use client'
+"use client";
 
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
 
-import styles from '../page.module.css'
-import { useEffect, useState } from 'react'
+import styles from "../page.module.css";
+import { useEffect, useState } from "react";
 
 export default function Logged() {
   // State
-  const [user, setUser] = useState({})
+  const [user, setUser] = useState({});
 
   // Router
-  const router = useRouter()
+  const router = useRouter();
 
   /**
    * On logout
    */
   const onLogout = async () => {
-    await fetch('/api/logout')
+    await fetch("/api/logout", { method: "POST" });
     // Return to home page
-    router.push('/')
-  }
+    router.push("/");
+  };
 
   // Get session
   useEffect(() => {
-    fetch('/api/getSession')
+    fetch("/api/getSession", { method: "POST" })
       .then((res) => {
         res
           .json()
           .then((body) => setUser(body.data))
-          .catch(console.error)
+          .catch(console.error);
       })
-      .catch(console.error)
-  }, [])
+      .catch(console.error);
+  }, []);
 
   /**
    * Render
@@ -57,12 +57,12 @@ export default function Logged() {
         </div>
       </main>
       <footer className={styles.footer}>
-        <a href='https://www.2ltech.fr/' target='_blank'>
+        <a href="https://www.2ltech.fr/" target="_blank">
           2LTech
         </a>
         {/**/}
         &copy; - All rights reserved
       </footer>
     </div>
-  )
+  );
 }

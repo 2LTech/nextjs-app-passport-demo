@@ -1,6 +1,12 @@
-import { setLocaLStrategy, APILoginRoute } from '@2ltech/nextjs-app-passport'
+import {
+  APICreateLoginRoute,
+  FindUser,
+  ValidatePassword,
+} from "@2ltech/nextjs-app-passport";
 
-import { findUser, validatePassword } from '@/lib/user'
+import { findUser, User, validatePassword } from "@/lib/user";
 
-setLocaLStrategy(findUser, validatePassword)
-export const POST = APILoginRoute
+export const POST = APICreateLoginRoute(
+  findUser as FindUser<User>,
+  validatePassword as ValidatePassword<User>,
+);
